@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:creativecommons.org)",
+      "Bash(curl -s https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

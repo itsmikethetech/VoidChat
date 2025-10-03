@@ -221,7 +221,17 @@ To contribute or modify:
 
 ## License
 
-GPL-2.0 (same as original AjChat)
+[VoidChat](https://github.com/itsmikethetech/VoidChat) © 2025 by [MikeTheTech](http://playcast.io/a/mikethetech) and [Playcast Inc.](https://pyrosoft.pro/) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc/4.0/)
+
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made
+- **NonCommercial** — You may not use the material for commercial purposes
 
 ## Credits
 
