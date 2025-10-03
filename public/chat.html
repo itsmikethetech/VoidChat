@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoidChat</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="header-content">
+        <a href="/" class="back-link">← Home</a>
+        <h1 class="room-title">#<span id="room-name">loading</span></h1>
+        <div class="header-actions">
+          <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+          <button id="export-btn" class="icon-btn" title="Export Chat">💾</button>
+          <button id="share-btn" class="icon-btn" title="Share Room">🔗</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="chat-layout">
+      <aside id="settings-panel" class="settings-panel">
+        <h3>Settings</h3>
+        <div class="setting-group">
+          <label for="username-input">Username</label>
+          <input
+            type="text"
+            id="username-input"
+            class="setting-input"
+            placeholder="guest"
+            maxlength="20"
+            pattern="[a-zA-Z0-9_-]+"
+          >
+        </div>
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="timestamps-toggle" checked>
+            Show Timestamps
+          </label>
+        </div>
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="sound-toggle" checked>
+            Sound Notifications
+          </label>
+        </div>
+        <div class="setting-group">
+          <label>
+            <input type="checkbox" id="system-messages-toggle" checked>
+            Show Join/Leave Messages
+          </label>
+        </div>
+        <button id="close-settings" class="btn btn-secondary">Close</button>
+      </aside>
+
+      <main class="chat-main">
+        <div id="messages" class="messages-container">
+          <div class="loading">Loading messages...</div>
+        </div>
+
+        <div id="typing-indicator" class="typing-indicator"></div>
+
+        <form id="message-form" class="message-form">
+          <input
+            type="text"
+            id="username-quick"
+            class="username-quick-input"
+            placeholder="Username"
+            maxlength="20"
+            pattern="[a-zA-Z0-9_-]+"
+            autocomplete="off"
+            title="Username (letters, numbers, hyphens, underscores)"
+          >
+          <input
+            type="text"
+            id="message-input"
+            class="message-input"
+            placeholder="Type a message..."
+            maxlength="500"
+            autocomplete="off"
+            disabled
+          >
+          <button type="submit" class="btn btn-primary" disabled>Send</button>
+        </form>
+
+        <div class="help-text">
+          Supports <strong>**bold**</strong>, <em>*italic*</em>, <code>`code`</code>, and links
+        </div>
+      </main>
+    </div>
+
+    <div id="share-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Share Room</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Share this link to invite others:</p>
+          <input type="text" id="share-link" class="share-link" readonly>
+          <button id="copy-link-btn" class="btn btn-primary">Copy Link</button>
+
+          <p style="margin-top: 1.5rem;">Embed in your website:</p>
+          <textarea id="embed-code" class="embed-code" readonly rows="3"></textarea>
+          <button id="copy-embed-btn" class="btn btn-secondary">Copy Embed Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/chat.js"></script>
+</body>
+</html>
